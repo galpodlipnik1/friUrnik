@@ -7,10 +7,6 @@ body {
     justify-content: space-between;
 }
 
-.header .titles {
-
-}
-
 .header .title {
     display: block;
     font-size: 3ex;
@@ -74,12 +70,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.grid-entry .description .top-aligned {
-}
-
-.grid-entry .description .bottom-aligned {
 }
 
 .grid-entry .description .row {
@@ -168,9 +158,6 @@ a.link-group {
     a.link-group {
         display: none;
     }
-}
-
-a.link-management {
 }
 
 .group-list {
