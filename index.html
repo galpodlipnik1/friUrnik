@@ -1,112 +1,130 @@
+<!-- saved from url=(0086)https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?student=63230255 -->
 <html lang="sl-SI">
   <!-- Velika zahvala https://urnik.fmf.uni-lj.si/ za odlične ideje glede oblikovanja. -->
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Bl kul urnik</title>
-    <meta name="generator" content="Urnik" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="./favicon.jpg" />
-    <link rel="stylesheet" href="./allocations.css" />
-    <style type="text/css">
+    <meta name="generator" content="Urnik">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./allocations.css">
+    <style type="text/css"> 
       .grid-outer {
-        display: grid;
-        /* an initial smaller column, then 5 equally-sized cols */
-        grid-template-columns: [hour-column-start] 50px [hour-column-end] repeat(
-            5,
-            1fr
-          );
-        /* the first row is smaller, then 15 equally sized */
-        grid-template-rows: [day-row-start] 20px [day-row-end] repeat(15, 1fr);
-
-        grid-template-areas:
-          ". d  d  d  d  d "
-          "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI";
+      display: grid;
+      /* an initial smaller column, then 5 equally-sized cols */
+      grid-template-columns: [hour-column-start] 50px [hour-column-end] repeat(5, 1fr);
+      /* the first row is smaller, then 15 equally sized */
+      grid-template-rows: [day-row-start] 20px [day-row-end] repeat(15, 1fr);
+      grid-template-areas: ". d  d  d  d  d "
+      "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI" "h dayMON dayTUE dayWED dayTHU dayFRI";
       }
-
       .grid-day-column {
-        grid-row: day-row-end / span 15;
-
-        /* this is a nested grid, but has the same number of cells with the same proportions, */
-        /* so it aligns with the outer grid cells */
-        display: grid;
-        grid-template-rows: repeat(15, 1fr);
-        /* because the ordering doesn't matter, use the dense algorithm */
-        grid-auto-flow: row dense;
-        grid-gap: 2px;
-
-        /* pass through hover events to the .grid-complete-row elements below */
-        pointer-events: none;
-
-        /* make vertical border lines play nicely */
-        padding-left: 2px;
-        padding-right: 2px;
-        border-left: thin solid rgb(237, 237, 237);
+      grid-row: day-row-end / span 15;
+      /* this is a nested grid, but has the same number of cells with the same proportions, */
+      /* so it aligns with the outer grid cells */
+      display: grid;
+      grid-template-rows: repeat(15, 1fr);
+      /* because the ordering doesn't matter, use the dense algorithm */
+      grid-auto-flow: row dense;
+      grid-gap: 2px;
+      /* pass through hover events to the .grid-complete-row elements below */
+      pointer-events: none;
+      /* make vertical border lines play nicely */
+      padding-left: 2px;
+      padding-right: 2px;
+      border-left: thin solid rgb(237, 237, 237);
       }
     </style>
   </head>
   <body>
     <div class="header">
       <div class="titles">
-        <span class="title">FRI 2024/2025, zimski semester</span>
-
+        <span class="title">FRI 2024/2025, letni semester</span>
         <span class="subtitle">63230255</span>
       </div>
+      <div class="aside">
+        <a href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?type=P">Show only lectures</a><br>
+        <a href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?type=LV&amp;type=AV&amp;type=LAB">Show only lab work</a><br>
+        <a href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?">Show lectures and lab work</a><br>
+        <a href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations_ical?student=63230255" style="font-weight: bold;">Export to calendar</a><br>
+      </div>
     </div>
-
     <div class="grid-container">
       <div class="grid-outer">
-        <div class="grid-day" style="grid-column: 2">ponedeljek</div>
-        <div class="grid-day" style="grid-column: 3">torek</div>
-        <div class="grid-day" style="grid-column: 4">sreda</div>
-        <div class="grid-day" style="grid-column: 5">četrtek</div>
-        <div class="grid-day" style="grid-column: 6">petek</div>
-        <div class="grid-hour" style="grid-row: 2">07:00</div>
-        <div class="grid-hour" style="grid-row: 3">08:00</div>
-        <div class="grid-hour" style="grid-row: 4">09:00</div>
-        <div class="grid-hour" style="grid-row: 5">10:00</div>
-        <div class="grid-hour" style="grid-row: 6">11:00</div>
-        <div class="grid-hour" style="grid-row: 7">12:00</div>
-        <div class="grid-hour" style="grid-row: 8">13:00</div>
-        <div class="grid-hour" style="grid-row: 9">14:00</div>
-        <div class="grid-hour" style="grid-row: 10">15:00</div>
-        <div class="grid-hour" style="grid-row: 11">16:00</div>
-        <div class="grid-hour" style="grid-row: 12">17:00</div>
-        <div class="grid-hour" style="grid-row: 13">18:00</div>
-        <div class="grid-hour" style="grid-row: 14">19:00</div>
-        <div class="grid-hour" style="grid-row: 15">20:00</div>
-        <div class="grid-hour" style="grid-row: 16">21:00</div>
-
-        <div class="grid-complete-row" style="grid-row: 2 / span 1"></div>
-        <div class="grid-complete-row" style="grid-row: 3 / span 1"></div>
-        <div class="grid-complete-row" style="grid-row: 4 / span 1"></div>
-        <div class="grid-complete-row" style="grid-row: 5 / span 1"></div>
-        <div class="grid-complete-row" style="grid-row: 6 / span 1"></div>
-        <div class="grid-complete-row" style="grid-row: 7 / span 1"></div>
-        <div class="grid-complete-row" style="grid-row: 8 / span 1"></div>
-        <div class="grid-complete-row" style="grid-row: 9 / span 1"></div>
-        <div class="grid-complete-row" style="grid-row: 10 / span 1"></div>
-        <div class="grid-complete-row" style="grid-row: 11 / span 1"></div>
-        <div class="grid-complete-row" style="grid-row: 12 / span 1"></div>
-        <div class="grid-complete-row" style="grid-row: 13 / span 1"></div>
-        <div class="grid-complete-row" style="grid-row: 14 / span 1"></div>
-        <div class="grid-complete-row" style="grid-row: 15 / span 1"></div>
-        <div class="grid-complete-row" style="grid-row: 16 / span 1"></div>
-
+        <div class="grid-day" style="grid-column: 2;">ponedeljek</div>
+        <div class="grid-day" style="grid-column: 3;">torek</div>
+        <div class="grid-day" style="grid-column: 4;">sreda</div>
+        <div class="grid-day" style="grid-column: 5;">četrtek</div>
+        <div class="grid-day" style="grid-column: 6;">petek</div>
+        <div class="grid-hour" style="grid-row: 2;">07:00</div>
+        <div class="grid-hour" style="grid-row: 3;">08:00</div>
+        <div class="grid-hour" style="grid-row: 4;">09:00</div>
+        <div class="grid-hour" style="grid-row: 5;">10:00</div>
+        <div class="grid-hour" style="grid-row: 6;">11:00</div>
+        <div class="grid-hour" style="grid-row: 7;">12:00</div>
+        <div class="grid-hour" style="grid-row: 8;">13:00</div>
+        <div class="grid-hour" style="grid-row: 9;">14:00</div>
+        <div class="grid-hour" style="grid-row: 10;">15:00</div>
+        <div class="grid-hour" style="grid-row: 11;">16:00</div>
+        <div class="grid-hour" style="grid-row: 12;">17:00</div>
+        <div class="grid-hour" style="grid-row: 13;">18:00</div>
+        <div class="grid-hour" style="grid-row: 14;">19:00</div>
+        <div class="grid-hour" style="grid-row: 15;">20:00</div>
+        <div class="grid-hour" style="grid-row: 16;">21:00</div>
+        <div class="grid-complete-row" style="grid-row: 2 / span 1;"></div>
+        <div class="grid-complete-row" style="grid-row: 3 / span 1;"></div>
+        <div class="grid-complete-row" style="grid-row: 4 / span 1;"></div>
+        <div class="grid-complete-row" style="grid-row: 5 / span 1;"></div>
+        <div class="grid-complete-row" style="grid-row: 6 / span 1;"></div>
+        <div class="grid-complete-row" style="grid-row: 7 / span 1;"></div>
+        <div class="grid-complete-row" style="grid-row: 8 / span 1;"></div>
+        <div class="grid-complete-row" style="grid-row: 9 / span 1;"></div>
+        <div class="grid-complete-row" style="grid-row: 10 / span 1;"></div>
+        <div class="grid-complete-row" style="grid-row: 11 / span 1;"></div>
+        <div class="grid-complete-row" style="grid-row: 12 / span 1;"></div>
+        <div class="grid-complete-row" style="grid-row: 13 / span 1;"></div>
+        <div class="grid-complete-row" style="grid-row: 14 / span 1;"></div>
+        <div class="grid-complete-row" style="grid-row: 15 / span 1;"></div>
+        <div class="grid-complete-row" style="grid-row: 16 / span 1;"></div>
         <div class="grid-day-column" style="grid-area: dayMON">
+          <div class="grid-entry" style="grid-row: 2 / span 3; background-color: hsla(31.74193548387097, 134.78%, 68.55%, 0.7)">
+            <div class="description">
+              <div class="top-aligned">
+                <div class="row">
+                  <a class="link-subject" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?subject=63721">UV_P</a>
+                  <span class="entry-type">| P</span>
+                  <div class="entry-hover">
+                    ponedeljek 08:00 - 11:00<br>
+                    P22
+                    <!-- (70 / 100) --> <br>
+                    Uporabniški vmesniki(63721)_P<br>
+                    Smrdel, Aleš<br>
+                    2. letnik, Računalništvo in informatika, prva stopnja: visokošolski strokovni, Uporabniški vmesniki<br>2. letnik, Upravna informatika, prva stopnja: univerzitetni<br>63721 padalci<br>
+                  </div>
+                </div>
+                <div class="row"><a class="link-classroom" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?classroom=141">P22</a></div>
+                <div class="row"><a class="link-teacher" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?teacher=144">Aleš Smrdel</a></div>
+              </div>
+              <div class="bottom-aligned">
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59083">2_BVS-RI_UV(63721)</a></div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=58964">2_BUN-UI</a></div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59084">63721_PAD</a></div>
+              </div>
+            </div>
+          </div>
           <div
             class="grid-entry"
             style="
-              grid-row: 1 / span 5;
-              background-color: hsla(123, 65%, 79%, 0.7);
+            grid-row: 6 / span 5;
+            background-color: hsla(123, 65%, 79%, 0.7);
             "
-          >
+            >
             <div class="description">
               <div class="top-aligned">
                 <div class="row">
                   <a class="link-subject">SLUŽBA</a>
                   <span class="entry-type">| D</span>
                   <div class="entry-hover">
-                    ponedeljek 07:00 - 12:00<br />
+                    ponedeljek 12:00 - 17:00<br />
                     Od doma
                     <!-- (54 / 50) -->
                     <br />
@@ -116,396 +134,221 @@
                 <div class="row">
                   <a class="link-classroom">Od Doma</a>
                 </div>
-
                 <div class="row">
                   <a class="link-teacher">Boris Cimperman</a>
                 </div>
               </div>
             </div>
           </div>
-          <div
-            class="grid-entry"
-            style="
-              grid-row: 7 / span 3;
-              background-color: hsla(247.5, 41.48%, 78.91%, 0.7);
-            "
-          >
-            <div class="description">
-              <div class="top-aligned">
-                <div class="row">
-                  <a class="link-subject" href="?subject=63714">IS(63714)_P</a>
-                  <span class="entry-type">| P</span>
-                  <div class="entry-hover">
-                    ponedeljek 13:00 - 16:00<br />
-                    P22
-                    <!-- (66 / 100) -->
-                    <br />
-                    Informacijski sistemi(63714)_P<br />
-                    Vavpotič, Damjan<br />
-                    2. letnik, Računalništvo in informatika, prva stopnja:
-                    visokošolski strokovni, Informacijski sistemi<br />3.
-                    letnik, Računalništvo in informatika, prva stopnja:
-                    visokošolski strokovni, Informacijski sistemi<br />
-                  </div>
-                </div>
-                <div class="row">
-                  <a class="link-classroom" href="?classroom=141">P22</a>
-                </div>
-
-                <div class="row">
-                  <a class="link-teacher" href="?teacher=109"
-                    >Damjan Vavpotič</a
-                  >
-                </div>
-              </div>
-              <div class="bottom-aligned">
-                <div class="row">
-                  <a class="link-group" href="?group=55718"
-                    >2_BVS-RI_IS(63714)</a
-                  >
-                </div>
-
-                <div class="row">
-                  <a class="link-group" href="?group=55719"
-                    >3_BVS-RI_IS(63714)</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-
         <div class="grid-day-column" style="grid-area: dayTUE">
-          <div
-            class="grid-entry"
-            style="
-              grid-row: 1 / span 2;
-              background-color: hsla(60, 77.95%, 84.77%, 0.7);
-            "
-          >
+          <div class="grid-entry" style="grid-row: 2 / span 3; background-color: hsla(169.71428571428572, 61.25%, 68.75%, 0.7)">
             <div class="description">
               <div class="top-aligned">
                 <div class="row">
-                  <a class="link-subject" href="?subject=63712">EMP_LV</a>
+                  <a class="link-subject" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?subject=63723">APS2_P</a>
+                  <span class="entry-type">| P</span>
+                  <div class="entry-hover">
+                    torek 08:00 - 11:00<br>
+                    P01
+                    <!-- (131 / 200) --> <br>
+                    Algoritmi in podatkovne strukture 2(63723)_P<br>
+                    Dobravec, Tomaž<br>
+                    2. letnik, Računalništvo in informatika, prva stopnja: visokošolski strokovni<br>63723 padalci<br>
+                  </div>
+                </div>
+                <div class="row"><a class="link-classroom" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?classroom=142">P01</a></div>
+                <div class="row"><a class="link-teacher" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?teacher=79">Tomaž Dobravec</a></div>
+              </div>
+              <div class="bottom-aligned">
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=58968">2_BVS-RI</a></div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59177">63723_PAD</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-entry" style="grid-row: 3 / span 2; background-color: hsla(169.71428571428572, 35.00%, 68.75%, 0.7)">
+            <div class="description">
+              <div class="top-aligned">
+                <div class="row">
+                  <a class="link-subject" href="?subject=63710">OVS_LV</a>
                   <span class="entry-type">| LV</span>
                   <div class="entry-hover">
-                    torek 07:00 - 09:00<br />
-                    PR12
-                    <!-- (18 / 18) -->
-                    <br />
-                    Elektronsko in mobilno poslovanje(63712)_LV<br />
-                    Rupnik, Rok<br />
-                    2. letnik, Računalništvo in informatika, prva stopnja:
-                    visokošolski strokovni, Elektronsko in mobilno poslovanje,
-                    LV, skupina 2<br />
+                    torek 09:00 - 11:00<br>
+                    P02
+                    <!-- (18 / 30) --> <br>
+                    Osnove verjetnosti in statistike(63710)_LV<br>
+                    Vuk, Martin<br>
+                    1. letnik, Računalništvo in informatika, prva stopnja: visokošolski strokovni, LV, skupina 7<br>
                   </div>
                 </div>
-                <div class="row">
-                  <a class="link-classroom" href="?classroom=128">PR12</a>
-                </div>
-
-                <div class="row">
-                  <a class="link-teacher" href="?teacher=107">Rok Rupnik</a>
-                </div>
+                <div class="row"><a class="link-classroom" href="?classroom=135">P02</a></div>
+                <div class="row"><a class="link-teacher" href="?teacher=117">Martin Vuk</a></div>
               </div>
               <div class="bottom-aligned">
-                <div class="row">
-                  <a class="link-group" href="?group=57920"
-                    >2_BVS-RI_EMP(63712)_LV_02</a
-                  >
-                </div>
+                <div class="row"><a class="link-group" href="?group=61313">1_BVS-RI_LV_07</a></div>
               </div>
             </div>
           </div>
-          <div
-            class="grid-entry"
-            style="
-              grid-row: 7 / span 3;
-              background-color: hsla(169.71428571428572, 61.25%, 68.75%, 0.7);
-            "
-          >
+          <div class="grid-entry" style="grid-row: 9 / span 2; background-color: hsla(247.5, 23.70%, 78.91%, 0.7)">
             <div class="description">
               <div class="top-aligned">
                 <div class="row">
-                  <a class="link-subject" href="?subject=63711">AiPS1_P</a>
-                  <span class="entry-type">| P</span>
+                  <a class="link-subject" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?subject=63772">_AV</a>
+                  <span class="entry-type">| AV</span>
                   <div class="entry-hover">
-                    torek 13:00 - 16:00<br />
-                    P22
-                    <!-- (88 / 100) -->
-                    <br />
-                    Algoritmi in podatkovne strukture 1(63711)_P<br />
-                    Mihelič, Jurij<br />
-                    2. letnik, Računalništvo in informatika, prva stopnja:
-                    visokošolski strokovni<br />
+                    torek 15:00 - 17:00<br>
+                    P18
+                    <!-- (14 / 30) --> <br>
+                    Pravni vidiki informacijskih tehnologij(63772)_AV<br>
+                    2. letnik, Računalništvo in informatika, prva stopnja: visokošolski strokovni, Pravni vidiki informacijskih tehnologij, AV, skupina 1<br>2. letnik, Računalništvo in informatika, prva stopnja: visokošolski strokovni, Pravni vidiki informacijskih tehnologij, AV, skupina 2<br>63772 padalci, AV, skupina 1<br>63772 padalci, AV, skupina 2<br>63772 padalci, AV, skupina 3<br>
                   </div>
                 </div>
-                <div class="row">
-                  <a class="link-classroom" href="?classroom=141">P22</a>
-                </div>
-
-                <div class="row">
-                  <a class="link-teacher" href="?teacher=147">Jurij Mihelič</a>
-                </div>
+                <div class="row"><a class="link-classroom" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?classroom=134">P18</a></div>
               </div>
               <div class="bottom-aligned">
-                <div class="row">
-                  <a class="link-group" href="?group=55607">2_BVS-RI</a>
-                </div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61606">2_BVS-RI_(63772)_AV_01</a></div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61607">2_BVS-RI_(63772)_AV_02</a></div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=60733">63772_PAD_AV_01</a></div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=60734">63772_PAD_AV_02</a></div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=60735">63772_PAD_AV_03</a></div>
               </div>
             </div>
           </div>
-
-          <div
-            class="grid-entry"
-            style="
-              grid-row: 3 / span 5;
-              background-color: hsla(6.131386861313867, 130.48%, 71.29%, 0.7);
-            "
-          >
+          <div class="grid-entry" style="grid-row: 5 / span 3; background-color: hsla(6.131386861313867, 130.48%, 71.29%, 0.7)">
             <div class="description">
               <div class="top-aligned">
                 <div class="row">
-                  <a class="link-subject" href="?subject=63749B"
-                    >IPIRI(63749)_P</a
-                  >
+                  <a class="link-subject" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?subject=63725">RIS(63725)_P</a>
                   <span class="entry-type">| P</span>
                   <div class="entry-hover">
-                    torek 09:00 - 14:00<br />
-                    P03
-                    <!-- (54 / 50) -->
-                    <br />
-                    Izbrana poglavja iz računalništva in
-                    informatike(63749B)_P<br />
-                    Špetič, Aleš<br />
-                    2. letnik, Računalništvo in informatika, prva stopnja:
-                    visokošolski strokovni, Izbrana poglavja iz računalništva in
-                    informatike<br />3. letnik, Računalništvo in informatika,
-                    prva stopnja: visokošolski strokovni, Izbrana poglavja iz
-                    računalništva in informatike<br />
+                    torek 11:00 - 14:00<br>
+                    P19
+                    <!-- (53 / 50) --> <br>
+                    Razvoj informacijskih sistemov(63725)_P<br>
+                    Kavčič, Alenka<br>
+                    2. letnik, Računalništvo in informatika, prva stopnja: visokošolski strokovni, Razvoj informacijskih sistemov<br>63725 padalci<br>
                   </div>
                 </div>
-                <div class="row">
-                  <a class="link-classroom" href="?classroom=139">P03</a>
-                </div>
-
-                <div class="row">
-                  <a class="link-teacher" href="?teacher=341">Aleš Špetič</a>
-                </div>
+                <div class="row"><a class="link-classroom" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?classroom=136">P19</a></div>
+                <div class="row"><a class="link-teacher" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?teacher=119">Alenka Kavčič</a></div>
               </div>
               <div class="bottom-aligned">
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59156">2_BVS-RI_RIS(63725)</a></div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59157">63725_PAD</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-entry" style="grid-row: 11 / span 2; background-color: hsla(204.57831325301203, 38.38%, 66.21%, 0.7)">
+            <div class="description">
+              <div class="top-aligned">
                 <div class="row">
-                  <a class="link-group" href="?group=55776"
-                    >2_BVS-RI_IPIRI(63749B)</a
-                  >
+                  <a class="link-subject" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?subject=63724">TK_LV</a>
+                  <span class="entry-type">| LV</span>
+                  <div class="entry-hover">
+                    torek 17:00 - 19:00<br>
+                    PR09
+                    <!-- (18 / 30) --> <br>
+                    Testiranje in kakovost(63724)_LV<br>
+                    Rožanc, Igor<br>
+                    2. letnik, Računalništvo in informatika, prva stopnja: visokošolski strokovni, Testiranje in kakovost, LV, skupina 1<br>2. letnik, Računalništvo in informatika, prva stopnja: visokošolski strokovni, Testiranje in kakovost, LV, skupina 2<br>
+                  </div>
                 </div>
-
+                <div class="row"><a class="link-classroom" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?classroom=131">PR09</a></div>
+                <div class="row"><a class="link-teacher" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?teacher=114">Igor Rožanc</a></div>
+              </div>
+              <div class="bottom-aligned">
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61639">2_BVS-RI_TK(63724)_LV_01</a></div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61640">2_BVS-RI_TK(63724)_LV_02</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-entry" style="grid-row: 7 / span 3; background-color: hsla(204.57831325301203, 67.17%, 66.21%, 0.7)">
+            <div class="description">
+              <div class="top-aligned">
                 <div class="row">
-                  <a class="link-group" href="?group=55777"
-                    >3_BVS-RI_IPIRI(63749B)</a
-                  >
+                  <a class="link-subject" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?subject=63724">TK_P</a>
+                  <span class="entry-type">| P</span>
+                  <div class="entry-hover">
+                    torek 13:00 - 16:00<br>
+                    P02
+                    <!-- (19 / 30) --> <br>
+                    Testiranje in kakovost(63724)_P<br>
+                    Rožanc, Igor<br>
+                    2. letnik, Računalništvo in informatika, prva stopnja: visokošolski strokovni, Testiranje in kakovost<br>63724 padalci<br>
+                  </div>
                 </div>
+                <div class="row"><a class="link-classroom" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?classroom=135">P02</a></div>
+                <div class="row"><a class="link-teacher" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?teacher=114">Igor Rožanc</a></div>
+              </div>
+              <div class="bottom-aligned">
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59131">2_BVS-RI_TK(63724)</a></div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59132">63724_PAD</a></div>
               </div>
             </div>
           </div>
         </div>
-
         <div class="grid-day-column" style="grid-area: dayWED">
-          <div
-            class="grid-entry"
-            style="
-              grid-row: 1 / span 3;
-              background-color: hsla(169.71428571428572, 61.25%, 68.75%, 0.7);
-            "
-          >
+          <div class="grid-entry" style="grid-row: 2 / span 3; background-color: hsla(247.5, 41.48%, 78.91%, 0.7)">
             <div class="description">
               <div class="top-aligned">
                 <div class="row">
-                  <a class="link-subject" href="?subject=63749B">PB2_P</a>
+                  <a class="link-subject" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?subject=63772">_P</a>
                   <span class="entry-type">| P</span>
                   <div class="entry-hover">
-                    sreda 07:00 - 10:00<br />
-                    P19
-                    <!-- (47 / 50) -->
-                    <br />
-                    Podatkovne baze 2(63713)_P<br />
-                    Zrnec, Aljaž<br />
-                    2. letnik, Računalništvo in informatika, prva stopnja:
-                    visokošolski strokovni, Podatkovne baze 2<br />3. letnik,
-                    Računalništvo in informatika, prva stopnja: visokošolski
-                    strokovni, Podatkovne baze 2<br />
+                    sreda 08:00 - 11:00<br>
+                    P02
+                    <!-- (14 / 30) --> <br>
+                    Pravni vidiki informacijskih tehnologij(63772)_P<br>
+                    Lutman, Karmen<br>
+                    2. letnik, Računalništvo in informatika, prva stopnja: visokošolski strokovni, Pravni vidiki informacijskih tehnologij<br>63772 padalci<br>
                   </div>
                 </div>
-                <div class="row">
-                  <a class="link-classroom" href="?classroom=p19">P19</a>
-                </div>
-
-                <div class="row">
-                  <a class="link-teacher" href="?teacher=341">Aljaž Zrnec</a>
-                </div>
+                <div class="row"><a class="link-classroom" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?classroom=135">P02</a></div>
+                <div class="row"><a class="link-teacher" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?teacher=638">Karmen Lutman</a></div>
               </div>
               <div class="bottom-aligned">
-                <div class="row">
-                  <a class="link-group" href="?group=55776"
-                    >2_BVS-RI_PB2(63713)</a
-                  >
-                </div>
-
-                <div class="row">
-                  <a class="link-group" href="?group=55777"
-                    >3_BVS-RI_PB2(63713)</a
-                  >
-                </div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59035">2_BVS-RI_(63772)</a></div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59036">63772_PAD</a></div>
               </div>
             </div>
           </div>
-          <div
-            class="grid-entry"
-            style="
-              grid-row: 5 / span 2;
-              background-color: hsla(169.71428571428572, 35%, 68.75%, 0.7);
-            "
-          >
+          <div class="grid-entry" style="grid-row: 5 / span 2; background-color: hsla(6.131386861313867, 74.56%, 71.29%, 0.7)">
             <div class="description">
               <div class="top-aligned">
                 <div class="row">
-                  <a class="link-subject" href="?subject=63711">AiPS1_LV</a>
+                  <a class="link-subject" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?subject=63725">RIS(63725)_LV</a>
                   <span class="entry-type">| LV</span>
                   <div class="entry-hover">
-                    sreda 11:00 - 13:00<br />
-                    PR06
-                    <!-- (18 / 18) -->
-                    <br />
-                    Algoritmi in podatkovne strukture 1(63711)_LV<br />
-                    Rožanc, Igor<br />
-                    2. letnik, Računalništvo in informatika, prva stopnja:
-                    visokošolski strokovni, LV, skupina 10<br />2. letnik,
-                    Računalništvo in informatika, prva stopnja: visokošolski
-                    strokovni, LV, skupina 5<br />
-                  </div>
-                </div>
-                <div class="row">
-                  <a class="link-classroom" href="?classroom=121">PR06</a>
-                </div>
-
-                <div class="row">
-                  <a class="link-teacher" href="?teacher=114">Igor Rožanc</a>
-                </div>
-              </div>
-              <div class="bottom-aligned">
-                <div class="row">
-                  <a class="link-group" href="?group=57859">2_BVS-RI_LV_10</a>
-                </div>
-
-                <div class="row">
-                  <a class="link-group" href="?group=57854">2_BVS-RI_LV_05</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="grid-entry"
-            style="
-              grid-row: 7 / span 2;
-              background-color: hsla(169.71428571428572, 35%, 68.75%, 0.7);
-            "
-          >
-            <div class="description">
-              <div class="top-aligned">
-                <div class="row">
-                  <a class="link-subject" href="?subject=63711">PB2_LV</a>
-                  <span class="entry-type">| LV</span>
-                  <div class="entry-hover">
-                    sreda 13:00 - 15:00<br />
+                    sreda 11:00 - 13:00<br>
                     PR11
-                    <!-- (18 / 18) -->
-                    <br />
-                    Podatkovne baze 2(63713)_LV<br />
-                    Zrnec, Aljaž<br />
-                    3. letnik, Računalništvo in informatika, prva stopnja:
-                    visokošolski strokovni, Podatkovne baze 2, LV, skupina 2<br />
+                    <!-- (18 / 18) --> <br>
+                    Razvoj informacijskih sistemov(63725)_LV<br>
+                    Fujs, Damjan<br>
+                    2. letnik, Računalništvo in informatika, prva stopnja: visokošolski strokovni, Razvoj informacijskih sistemov, LV, skupina 3<br>
                   </div>
                 </div>
-                <div class="row">
-                  <a class="link-classroom" href="?classroom=121">PR11</a>
-                </div>
-
-                <div class="row">
-                  <a class="link-teacher" href="?teacher=114">Aljaž Zrnec</a>
-                </div>
+                <div class="row"><a class="link-classroom" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?classroom=129">PR11</a></div>
+                <div class="row"><a class="link-teacher" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?teacher=578">Damjan Fujs</a></div>
               </div>
               <div class="bottom-aligned">
-                <div class="row">
-                  <a class="link-group" href="?group=57859"
-                    >3_BVS-RI_PB2(63713)_LV_02</a
-                  >
-                </div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61620">2_BVS-RI_RIS(63725)_LV_03</a></div>
               </div>
             </div>
           </div>
           <div
             class="grid-entry"
             style="
-              grid-row: 4 / span 2;
-              background-color: hsla(247.5, 23.7%, 78.91%, 0.7);
+            grid-row: 8 / span 4;
+            background-color: hsla(123, 65%, 79%, 0.7);
             "
-          >
-            <div class="description">
-              <div class="top-aligned">
-                <div class="row">
-                  <a class="link-subject" href="?subject=63714">IS(63714)_LV</a>
-                  <span class="entry-type">| LV</span>
-                  <div class="entry-hover">
-                    sreda 10:00 - 12:00<br />
-                    PR15
-                    <!-- (18 / 16) -->
-                    <br />
-                    Informacijski sistemi(63714)_LV<br />
-                    Grohar, Miha<br />
-                    2. letnik, Računalništvo in informatika, prva stopnja:
-                    visokošolski strokovni, Informacijski sistemi, LV, skupina
-                    3<br />2. letnik, Računalništvo in informatika, prva
-                    stopnja: visokošolski strokovni, Informacijski sistemi, LV,
-                    skupina 6<br />
-                  </div>
-                </div>
-                <div class="row">
-                  <a class="link-classroom" href="?classroom=125">PR15</a>
-                </div>
-
-                <div class="row">
-                  <a class="link-teacher" href="?teacher=354">Miha Grohar</a>
-                </div>
-              </div>
-              <div class="bottom-aligned">
-                <div class="row">
-                  <a class="link-group" href="?group=58018"
-                    >2_BVS-RI_IS(63714)_LV_03</a
-                  >
-                </div>
-
-                <div class="row">
-                  <a class="link-group" href="?group=58021"
-                    >2_BVS-RI_IS(63714)_LV_06</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="grid-entry"
-            style="
-              grid-row: 10 / span 3;
-              background-color: hsla(123, 65%, 79%, 0.7);
-            "
-          >
+            >
             <div class="description">
               <div class="top-aligned">
                 <div class="row">
                   <a class="link-subject">SLUŽBA</a>
                   <span class="entry-type">| D</span>
                   <div class="entry-hover">
-                    sreda 16:00 - 19:00(18:00)<br />
+                    sreda 14:00 - 18:00<br />
                     Od doma
                     <!-- (54 / 50) -->
                     <br />
@@ -513,9 +356,8 @@
                   </div>
                 </div>
                 <div class="row">
-                  <a class="link-classroom">Od doma</a>
+                  <a class="link-classroom">Od Doma</a>
                 </div>
-
                 <div class="row">
                   <a class="link-teacher">Boris Cimperman</a>
                 </div>
@@ -523,70 +365,21 @@
             </div>
           </div>
         </div>
-
         <div class="grid-day-column" style="grid-area: dayTHU">
           <div
             class="grid-entry"
             style="
-              grid-row: 1 / span 3;
-              background-color: hsla(60, 136.41%, 84.77%, 0.7);
+            grid-row: 1 / span 6;
+            background-color: hsla(123, 65%, 79%, 0.7);
             "
-          >
-            <div class="description">
-              <div class="top-aligned">
-                <div class="row">
-                  <a class="link-subject" href="?subject=63712">EMP_P</a>
-                  <span class="entry-type">| P</span>
-                  <div class="entry-hover">
-                    četrtek 07:00 - 10:00<br />
-                    P01
-                    <!-- (85 / 200) -->
-                    <br />
-                    Elektronsko in mobilno poslovanje(63712)_P<br />
-                    Rupnik, Rok<br />
-                    2. letnik, Računalništvo in informatika, prva stopnja:
-                    visokošolski strokovni, Elektronsko in mobilno poslovanje<br />3.
-                    letnik, Računalništvo in informatika, prva stopnja:
-                    visokošolski strokovni, Elektronsko in mobilno poslovanje<br />
-                  </div>
-                </div>
-                <div class="row">
-                  <a class="link-classroom" href="?classroom=142">P01</a>
-                </div>
-
-                <div class="row">
-                  <a class="link-teacher" href="?teacher=107">Rok Rupnik</a>
-                </div>
-              </div>
-              <div class="bottom-aligned">
-                <div class="row">
-                  <a class="link-group" href="?group=55740"
-                    >2_BVS-RI_EMP(63712)</a
-                  >
-                </div>
-
-                <div class="row">
-                  <a class="link-group" href="?group=55741"
-                    >3_BVS-RI_EMP(63712)</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="grid-entry"
-            style="
-              grid-row: 5 / span 6;
-              background-color: hsla(123, 65%, 79%, 0.7);
-            "
-          >
+            >
             <div class="description">
               <div class="top-aligned">
                 <div class="row">
                   <a class="link-subject">SLUŽBA</a>
                   <span class="entry-type">| P</span>
                   <div class="entry-hover">
-                    četrtek 11:00 - 16:00(17:00)<br />
+                    četrtek 07:00 - 13:00<br />
                     V pisarni
                     <!-- (54 / 50) -->
                     <br />
@@ -594,32 +387,77 @@
                   </div>
                 </div>
                 <div class="row">
-                  <a class="link-classroom">V Pisarni</a>
+                  <a class="link-classroom">V pisarni</a>
                 </div>
-
                 <div class="row">
                   <a class="link-teacher">Boris Cimperman</a>
                 </div>
               </div>
             </div>
           </div>
+          <div class="grid-entry" style="grid-row: 8 / span 2; background-color: hsla(169.71428571428572, 35.00%, 68.75%, 0.7)">
+            <div class="description">
+              <div class="top-aligned">
+                <div class="row">
+                  <a class="link-subject" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?subject=63723">APS2_AV</a>
+                  <span class="entry-type">| AV</span>
+                  <div class="entry-hover">
+                    četrtek 14:00 - 16:00<br>
+                    P19
+                    <!-- (30 / 50) --> <br>
+                    Algoritmi in podatkovne strukture 2(63723)_AV<br>
+                    RADOVIČ, BORIS<br>
+                    2. letnik, Računalništvo in informatika, prva stopnja: visokošolski strokovni, AV, skupina 3<br>
+                  </div>
+                </div>
+                <div class="row"><a class="link-classroom" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?classroom=136">P19</a></div>
+                <div class="row"><a class="link-teacher" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?teacher=650">BORIS RADOVIČ</a></div>
+              </div>
+              <div class="bottom-aligned">
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61583">2_BVS-RI_AV_03</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-entry" style="grid-row: 11 / span 2; background-color: hsla(31.74193548387097, 77.02%, 68.55%, 0.7)">
+            <div class="description">
+              <div class="top-aligned">
+                <div class="row">
+                  <a class="link-subject" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?subject=63721">UV_LV</a>
+                  <span class="entry-type">| LV</span>
+                  <div class="entry-hover">
+                    četrtek 17:00 - 19:00<br>
+                    PR15
+                    <!-- (18 / 16) --> <br>
+                    Uporabniški vmesniki(63721)_LV<br>
+                    Smrdel, Aleš<br>
+                    2. letnik, Računalništvo in informatika, prva stopnja: visokošolski strokovni, Uporabniški vmesniki, LV, skupina 2<br>2. letnik, Računalništvo in informatika, prva stopnja: visokošolski strokovni, Uporabniški vmesniki, LV, skupina 4<br>
+                  </div>
+                </div>
+                <div class="row"><a class="link-classroom" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?classroom=125">PR15</a></div>
+                <div class="row"><a class="link-teacher" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?teacher=144">Aleš Smrdel</a></div>
+              </div>
+              <div class="bottom-aligned">
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61642">2_BVS-RI_UV(63721)_LV_02</a></div>
+                <div class="row"><a class="link-group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61644">2_BVS-RI_UV(63721)_LV_04</a></div>
+              </div>
+            </div>
+          </div>
         </div>
-
         <div class="grid-day-column" style="grid-area: dayFRI">
           <div
             class="grid-entry"
             style="
-              grid-row: 2 / span 8;
-              background-color: hsla(123, 65%, 79%, 0.7);
+            grid-row: 2 / span 8;
+            background-color: hsla(123, 65%, 79%, 0.7);
             "
-          >
+            >
             <div class="description">
               <div class="top-aligned">
                 <div class="row">
                   <a class="link-subject">SLUŽBA</a>
                   <span class="entry-type">| P</span>
                   <div class="entry-hover">
-                    petek 08:00 - 16:00<br />
+                    ponedeljek 08:00 - 16:00<br />
                     V pisarni
                     <!-- (54 / 50) -->
                     <br />
@@ -627,9 +465,8 @@
                   </div>
                 </div>
                 <div class="row">
-                  <a class="link-classroom">V Pisarni</a>
+                  <a class="link-classroom">V pisarni</a>
                 </div>
-
                 <div class="row">
                   <a class="link-teacher">Boris Cimperman</a>
                 </div>
@@ -639,31 +476,32 @@
         </div>
       </div>
     </div>
-
     <div class="group-list">
-      <a class="group" href="?group=55607">2_BVS-RI</a><br />
-
-      <a class="group" href="?group=55740">2_BVS-RI_EMP(63712)</a><br />
-
-      <a class="group" href="?group=57920">2_BVS-RI_EMP(63712)_LV_02</a><br />
-
-      <a class="group" href="?group=55776">2_BVS-RI_IPIRI(63749B)</a><br />
-
-      <a class="group" href="?group=55718">2_BVS-RI_IS(63714)</a><br />
-
-      <a class="group" href="?group=58018">2_BVS-RI_IS(63714)_LV_03</a><br />
-
-      <a class="group" href="?group=58021">2_BVS-RI_IS(63714)_LV_06</a><br />
-
-      <a class="group" href="?group=57854">2_BVS-RI_LV_05</a><br />
-
-      <a class="group" href="?group=57859">2_BVS-RI_LV_10</a><br />
-
-      <a class="group" href="?group=55741">3_BVS-RI_EMP(63712)</a><br />
-
-      <a class="group" href="?group=55777">3_BVS-RI_IPIRI(63749B)</a><br />
-
-      <a class="group" href="?group=55719">3_BVS-RI_IS(63714)</a><br />
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59030">1_BUN-UI</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59031">1_BVS-RI</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=58964">2_BUN-UI</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=58968">2_BVS-RI</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59035">2_BVS-RI_(63772)</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61606">2_BVS-RI_(63772)_AV_01</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61607">2_BVS-RI_(63772)_AV_02</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61583">2_BVS-RI_AV_03</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59156">2_BVS-RI_RIS(63725)</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61620">2_BVS-RI_RIS(63725)_LV_03</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59131">2_BVS-RI_TK(63724)</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61639">2_BVS-RI_TK(63724)_LV_01</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61640">2_BVS-RI_TK(63724)_LV_02</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59083">2_BVS-RI_UV(63721)</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61642">2_BVS-RI_UV(63721)_LV_02</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=61644">2_BVS-RI_UV(63721)_LV_04</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59188">63710_PAD</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59084">63721_PAD</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59177">63723_PAD</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59132">63724_PAD</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59157">63725_PAD</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=59036">63772_PAD</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=60733">63772_PAD_AV_01</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=60734">63772_PAD_AV_02</a><br>
+      <a class="group" href="https://urnik.fri.uni-lj.si/timetable/fri-2024_2025-letni/allocations?group=60735">63772_PAD_AV_03</a><br>
     </div>
   </body>
 </html>
